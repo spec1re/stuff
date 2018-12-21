@@ -91,6 +91,9 @@ sed -i "" -E "s/(FreeBSD.*enabled:) no/\1 yes/" /usr/local/etc/pkg/repos/FreeBSD
 pkg update
 pkg install postfix libspf2 opendkim libmilter p5-perl-ldap python36 py36-postfix-policyd-spf-python postfix-postfwd opendmarc pflogsumm zip
 
+# Install script dependencies
+pkg install bash
+
 # restore repository configuration state
 #cp /root/pfSense.bkp.conf $repo2
 cp $repo_dir/*conf /usr/local/etc/pkg/repos/.
